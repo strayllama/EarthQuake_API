@@ -3,12 +3,33 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/bundle.js"></script>
-    <title>QUAKES</title>
+    <title>EarthQuakes</title>
   </head>
   <body>
-    <h1>EarthQuake Looker-Upper</h1>
-    <select id="quake-select"></select>
-    <div id="quake-container"></div>
+    <h1>EarthQuake Looker-upper</h1>
+    Magnitude Above:
+    <div id="quake-options">
+      <select id="magnitude-select">
+        <option value="" disabled selected>Pick a maganatude range:</option>
+        <option value="8">8+</option>
+        <option value="7">7+</option>
+        <option value="6">6+</option>
+        <option value="5">5+</option>
+        <option value="4">4+</option>
+        <option value="3">3+</option>
+        <option value="2">2+</option>
+        <option value="1">1+</option>
+      </select>
+      <button type="button" id="refresh-quake-list">Click to re-fresh EarthQuake list</button>
+    </div>
+  </br>
+    <div id="quake-pick">Choose an EarthQuake from the list to zoom in on it:
+      <select id="quake-select"></select>
+    </div>
+    <!-- <div id="quake-container"></div> -->
+    <div id="main-map"></div>
+    <div id="quake-list"></div>
   </body>
 </html>
